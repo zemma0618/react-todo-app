@@ -1,0 +1,254 @@
+@font-face {
+  font-family: "DungGeunMo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: "DungGeunMo";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* .background-city-area {
+  position: relative;
+  z-index: -9998;
+  width: 100vw;
+  height: 100vh;
+} */
+
+.background-city {
+  position: fixed;
+  z-index: -990;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.background-animation {
+  background-image: url("./image/sparkleImage.png");
+  background-size: contain;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: -9999;
+  margin: 0;
+  animation: motion 2s linear 0s infinite alternate;
+  margin-top: 0;
+}
+
+.background-area {
+  background-image: url("./image/todoBackgroundImage.jpg");
+  background-size: contain;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: -10000;
+  margin: 0;
+}
+
+@keyframes motion {
+  0% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 10px;
+  }
+}
+
+.all-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  position: absolute;
+  width: 800px;
+  height: 500px;
+  text-align: center;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 10px 10px rgba(135, 96, 233, 40%);
+}
+
+.header {
+  background-color: rgb(255, 153, 255);
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title {
+  text-align: left;
+  font-size: 20px;
+  color: white;
+  margin-left: 20px;
+}
+
+.todo-container {
+  height: 460px;
+  display: flex;
+  flex-direction: column;
+  border: 10px solid rgb(255, 153, 255);
+  border-top: none;
+  box-sizing: border-box;
+  box-shadow: inset 5px 5px rgba(135, 96, 233, 40%);
+}
+
+.todolist {
+  all: unset;
+  list-style: none;
+  padding: 10px;
+  height: 380px;
+  margin-top: none;
+  overflow-y: scroll;
+}
+
+.todolist::-webkit-scrollbar {
+  display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+
+.todolist-item {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-descrption-checked {
+  color: rgb(171, 171, 171);
+  text-decoration: line-through;
+}
+
+.todo-front-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-edit-input {
+  all: unset;
+  width: 500px;
+  height: 40px;
+  text-align: left;
+}
+
+.checkbox {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+}
+
+.checked-heart-image {
+  width: 40px;
+  height: 40px;
+}
+
+.unchecked-heart-image {
+  width: 40px;
+  height: 40px;
+}
+
+.todo-insert {
+  all: unset;
+  font-size: 100%;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 770px;
+  height: 40px;
+  justify-content: space-between;
+  display: flex;
+  background-color: rgba(255, 153, 255, 15%);
+  text-align: left;
+}
+
+.todo-insert-input {
+  all: unset;
+  height: 100%;
+  width: 500px;
+  margin-left: 10px;
+}
+
+.todo-insert-input::placeholder {
+  font-family: "DungGeunMo";
+  text-align: left;
+}
+
+.submit-button {
+  all: unset;
+  width: 50px;
+  height: 36px;
+  border: 2px solid rgb(249, 167, 255);
+  background: linear-gradient(
+    to bottom,
+    rgb(251, 191, 255),
+    rgb(252, 221, 255)
+  );
+  text-align: center;
+}
+
+.submit-button:hover {
+  background: linear-gradient(
+    to bottom,
+    rgb(248, 143, 255),
+    rgb(250, 194, 255)
+  );
+}
+
+.list-button {
+  all: unset;
+  width: 40px;
+  height: 20px;
+  font-size: 15px;
+  border: 1px solid rgb(249, 167, 255);
+  background: linear-gradient(
+    to bottom,
+    rgb(251, 191, 255),
+    rgb(252, 221, 255)
+  );
+  text-align: center;
+  margin-right: 10px;
+}
+
+.list-button:hover {
+  background: linear-gradient(
+    to bottom,
+    rgb(248, 143, 255),
+    rgb(250, 194, 255)
+  );
+}
+
+.header-deco-button-container {
+  margin-right: 15px;
+}
+
+.deco-button {
+  all: unset;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgb(249, 167, 255);
+  background: linear-gradient(
+    to bottom,
+    rgb(251, 191, 255),
+    rgb(252, 221, 255)
+  );
+  text-align: center;
+}
+
+/* .todolist-item {
+} */
